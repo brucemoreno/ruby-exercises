@@ -45,12 +45,17 @@ return chart
 end
 
 def count_empty_seats(chart)
-  # take a chart and return the number of empty (nil) seats in it
-
+   # take a chart and return the number of empty (nil) seats in it
   # NOTE: `chart` should **not** be mutated
+  return chart.flatten(1).count(nil)
+  
+
 end
 
 def find_favorite(array_of_hash_objects)
+     array_of_hash_objects.map{|x| return x if x[:is_my_favorite?]}
+     return nil
+
   # take an array_of_hash_objects and return the hash which has the key/value
   # pair :is_my_favorite? => true. If no hash returns the value true to the key
   # :is_my_favorite? it should return nil
